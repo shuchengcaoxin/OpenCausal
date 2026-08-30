@@ -9,7 +9,7 @@
 
 **Author:** Shucheng (Bangli) Cao
 
-**This is a standalone fork of OpenCausal** — the causal-evidence agent below, split out on
+**This is the standalone repository for OpenCausal** — the causal-evidence agent below, split out on
 its own so it can be cited and developed independently. It is one of two components of
 **CausalSentinel**, the CABS 2026 Data Science Summer Internship project: OpenCausal
 (this repo, causal evidence for drug-target prioritization) and **OpenSentinel**
@@ -242,34 +242,6 @@ tool returned no estimate**, and any claim that this agent performed MR itself.
 
 On the 10-pair benchmark it currently rejects 2 cards — each for a real defect, not a false
 alarm. Run `test_validator.py` after any change to it.
-
-## OpenSentinel — the drug-safety side (Natalie Huang)
-
-The repo's companion sub-project, **shipped in [`nathdrug/natalie-drug-agent/`](nathdrug/natalie-drug-agent/)**:
-a **drug-comparison agent**. Give it two drug names, and it autonomously calls
-**PubChem** (molecular properties) and **openFDA** (FAERS safety signals) for each —
-four tool calls — then builds a side-by-side comparison table, an AI pattern summary,
-and a CSV export, all in a Streamlit UI. Both databases are free and keyless; only the
-summary uses a Gemini key.
-
-Run it (two minutes, same pattern as the app above):
-
-```bash
-cd nathdrug/natalie-drug-agent
-pip install -r requirements.txt
-streamlit run natalie_app.py
-```
-
-![OpenSentinel comparing two drugs — autonomous tool calls and the side-by-side table](nathdrug/natalie-drug-agent/natalie_screenshots/natalie_02_toolcalls.png)
-
-Details, examples and screenshots: [her README](nathdrug/natalie-drug-agent/README.md).
-Original scope: [`MVP_Natalie.md`](MVP_Natalie.md) · merged in
-[#20](https://github.com/ds4cabs/CausalSentinel/pull/20).
-
-Together the two halves cover the target-selection question from both directions:
-**OpenCausal** asks *"is this protein worth pursuing?"* from the genetics up, and
-**OpenSentinel** asks *"how do the candidate drugs actually differ?"* from the
-pharmacy down.
 
 ## Notes
 This project is the cohort's causal evidence reference implementation with strong
