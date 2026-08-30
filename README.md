@@ -1,4 +1,4 @@
-# CausalSentinel
+# OpenCausal
 
 [![CABS: ds4cabs](https://img.shields.io/badge/CABS-ds4cabs-1f4b99?logo=github)](https://github.com/ds4cabs)
 [![GitHub Pages: live](https://img.shields.io/badge/GitHub_Pages-live-brightgreen?logo=github)](https://ds4cabs.github.io/CausalSentinel/)
@@ -7,7 +7,16 @@
 ![type: Dossier Generator](https://img.shields.io/badge/type-Dossier_Generator-1f6feb)
 ![domain: Causal Inference](https://img.shields.io/badge/domain-Causal_Inference-0aa)
 
-**Interns:** Shucheng Cao (CausalSentinel core), Natalie Huang (OpenSentinel sub-project)
+**Author:** Shucheng (Bangli) Cao
+
+**This is a standalone fork of OpenCausal** — the causal-evidence agent below, split out on
+its own so it can be cited and developed independently. It is one of two components of
+**CausalSentinel**, the CABS 2026 Data Science Summer Internship project: OpenCausal
+(this repo, causal evidence for drug-target prioritization) and **OpenSentinel**
+(drug-safety comparison, built by fellow intern Natalie Huang). The combined project,
+with both components together, lives at
+[github.com/ds4cabs/CausalSentinel](https://github.com/ds4cabs/CausalSentinel).
+
 **Project Type:** Dossier Generator
 
 ## Overview
