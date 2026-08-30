@@ -1,5 +1,9 @@
 # OpenCausal — MVP Version (Gemini AI Agent · Dossier Generator) · CausalSentinel Team Tech Lead
 
+> **This is the original pre-build proposal (July 2026). It describes what was planned, not
+> what shipped — the R/DuckDB MR pre-computation and colocalization were deliberately not
+> built. For what the system actually does, see [README.md](README.md).**
+
 **Intern:** Shucheng (Bangli) Cao
 **Level:** 5th-year PhD candidate (McGill, Quantitative Life Sciences), Advanced Python/R
 **Timeline:** 2–3 weeks (~55 hours)
