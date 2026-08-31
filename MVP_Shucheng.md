@@ -42,13 +42,13 @@
 
 ## Week-by-Week
 
-**Week 1 (~18h):** Run MR + coloc for 5 cis-pQTL proteins × MASLD in R; persist to DuckDB. **Hand off the engine sub-template.**
+**Week 1 (~18h):** Run MR + coloc for 5 cis-pQTL proteins × MASLD in R; persist to DuckDB. **Pair-mentor Natalie on the engine sub-template.**
 **Week 2 (~22h):** Build 8 Python tool functions (4 hit public APIs, 1 reads DuckDB, 3 wrap NCBI / gnomAD / GWAS Catalog / PharmGKB). Wire up Gemini. Build card formatter with embedded MR forest plot and gnomAD constraint plot.
 **Week 3 (~15h):** Generate 5 causal cards + 2 head-to-heads; tune system prompt; README + demo.
 
 ## What's OUT
 
-1,200-instrument cache, AlphaFold druggability scoring on 50+50 reference targets, RCSB PDB, full bidirectional mode, FAERS safety priors layer (the drug-safety component), 11-source target-dossier query layer.
+1,200-instrument cache, AlphaFold druggability scoring on 50+50 reference targets, RCSB PDB, full bidirectional mode, FAERS safety priors layer (Natalie's module), 11-source target-dossier query layer.
 
 ## Stretch Goals
 
@@ -61,7 +61,7 @@
 
 - Ran two-sample MR with colocalization for 5 cis-pQTL proteins × MASLD in R, persisted to DuckDB for instant agent-tool retrieval.
 - Wrapped 8 public databases (IEU OpenGWAS pre-computed, UniProt, Open Targets, ChEMBL, ClinVar, gnomAD, GWAS Catalog, PharmGKB) into a Gemini agent producing causal evidence cards with gnomAD-derived target-safety constraint metrics and PharmGKB-derived drug-gene context.
-- Generated 5 causal cards + 2 head-to-head comparisons; ran the week-1 agent-setup hand-off for the shared starter template.
+- Generated 5 causal cards + 2 head-to-head comparisons; pair-mentored a beginner team-mate through agent setup in week 1.
 
 ## Tech Stack
 
@@ -73,13 +73,13 @@ R (TwoSampleMR, coloc, ieugwasr) for pre-computation; Python, `google-generative
 
 Every intern's agent uses Gemini's automatic function calling, but the interface layer differs by paradigm. The cohort uses **one starter repo with three sub-templates** that interns clone in week 1:
 
-- **Dossier-generator template** — CLI script: takes structured args, runs the agent workflow autonomously, writes `*.md` + `*.json` to disk.
-- **Dashboard template** — Streamlit page with selectors and tables; the agent is invoked on button-click for specific synthesis tasks.
-- **Computation-engine template** — Streamlit form (or CLI) that takes structured analytical inputs, runs the agent workflow, produces a downloadable analytical report with plots.
+- **Dossier-generator template** — CLI script: takes structured args, runs the agent workflow autonomously, writes `*.md` + `*.json` to disk. Used by Beyza, Chin Hung, Christina, Shucheng, Xiaoxue.
+- **Dashboard template** — Streamlit page with selectors and tables; the agent is invoked on button-click for specific synthesis tasks. Used by Aaron, Jason, Shawn.
+- **Computation-engine template** — Streamlit form (or CLI) that takes structured analytical inputs, runs the agent workflow, produces a downloadable analytical report with plots. Used by Reuben, Kening, Natalie.
 
 **Why no chat interfaces?** Scientists need reproducible, shareable artifacts. The agent dimension (Gemini-as-orchestrator, autonomous tool-calling across multiple public databases, synthesis across sources) is preserved in all three paradigms; only the deliverable shape changes.
 
-The starter repo with all three sub-templates is owned by another project in the cohort. The shared repo should also include pre-built wrappers for the most heavily-used databases (ChEMBL, openFDA FAERS, Open Targets, ClinVar) so multiple interns don't redo the same boilerplate.
+**Christina** (OpenRepurpose evidence-and-validation module) owns the starter repo with all three sub-templates. The shared repo should also include pre-built wrappers for the most heavily-used databases (ChEMBL, openFDA FAERS, Open Targets, ClinVar) so multiple interns don't redo the same boilerplate.
 
 ### Reference snippet — Gemini function calling (same across all three paradigms)
 
