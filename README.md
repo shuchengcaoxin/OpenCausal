@@ -17,13 +17,6 @@ its own so it can be cited and developed independently. It is one of two compone
 with both components together, lives at
 [github.com/ds4cabs/CausalSentinel](https://github.com/ds4cabs/CausalSentinel).
 
-**Where this repository came from, and what is not in it.** OpenCausal was split out of the
-combined CausalSentinel repository so that this component can be cited and developed on its own.
-The split carried over only the code, cards and documentation belonging to OpenCausal. The
-drug-safety component and its scope documents are not here: they are a separate deliverable with
-a separate author, and they remain in the combined repository above, which is the place to look
-for them. Nothing was removed for any reason other than scope.
-
 **Project Type:** Dossier Generator
 
 ## Overview
