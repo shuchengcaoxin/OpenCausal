@@ -124,6 +124,11 @@ independent skeptic) confirmed 18 defects the token-level validator missed (reca
 correctly and recommended the opposite intervention. The direction sentence is now
 mechanical and a direction lock rejects contradicting runs.
 
+The full record is in [`audit/`](audit/README.md): 86 allegations from four critic lenses,
+36 of them adjudicated by an independent skeptic, 27 upheld, 18 distinct after
+deduplication. **Fifty allegations were never adjudicated** — the harness capped
+verification at the first 36 — so 18 is a lower bound, not a total.
+
 ## v0.1 — 2026-07-13 · Round 1+2 (merged to `main`, PR #7)
 
 - Gemini tool-calling agent (`google-genai`, automatic function calling) + 8 tools:
