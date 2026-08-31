@@ -41,7 +41,7 @@ tool output). Viewer bundle rebuilt.
   add the model's two sentences — and `validate_card.py` runs on them live, shown
   on the page including any VALIDATION FAILED tokens.
 - `app_screenshot.py`: Playwright capture of the running app for README/deck
-  (same pattern as `nathdrug`'s screenshot helper). Screenshots in `figs/`.
+  Screenshots in `figs/`.
 - `requirements.txt`: + `streamlit`, `pandas`.
 
 Same-input evidence (PCSK9 × high cholesterol, no key): 10 tool calls, ~20 s,
